@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [All Test Suite]" guice-stage="DEVELOPMENT" verbose="0">
+  <test thread-count="5" name="/home/ankur/Documents/intern code review/WebinarFrameworkDemo(failed)" verbose="0">
+    <classes>
+      <class name="Login.LoginPageTest">
+        <methods>
+          <include name="TearUp"/>
+          <include name="TearDown"/>
+          <include name="basePageNavigation"/>
+        </methods>
+      </class> <!-- Login.LoginPageTest -->
+    </classes>
+  </test> <!-- /home/ankur/Documents/intern code review/WebinarFrameworkDemo(failed) -->
+</suite> <!-- Failed suite [All Test Suite] -->
