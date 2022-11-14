@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="Reference Card - Rest Assured">
+        <classes>
+            <class name="com.knoldus.Validations"></class>
+            <class name="com.knoldus.SimpleTest"></class>
+            <class name="com.knoldus.OAuth2_0"></class>
+            <class name="com.knoldus.HttpMethods"></class>
+            <class name="com.knoldus.ExtractingResponse"></class>
+            <class name="com.knoldus.Chaining"></class>
+            <class name="com.knoldus.BasicAuth"></class>
+            <class name="com.knoldus.DDT.ApachePOITestDemo"></class>
+        </classes>
+    </test>
+</suite>
