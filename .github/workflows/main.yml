@@ -50,8 +50,5 @@ jobs:
 
       - name: Run k6 load test
         uses: k6io/action@v0.1
-        
-      - name: Run k6 test
-        run: |
-             cd PSRTestDemo
-             k6 run demo.js
+        with:
+          filename: PSRTestDemo/post.js
