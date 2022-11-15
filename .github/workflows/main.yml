@@ -61,4 +61,25 @@ jobs:
         with:
           node-version: '12'
       - run: npm install -g newman
-      - run: newman run PostmanDemo/PostmanDemo.postman_collection.json
+      - run: npm install -g newman-reporter-htmlextra
+      - run: newman run PostmanDemo/PostmanDemo.postman_collection.json --reporters=htmlextra --reporter-htmlextra-export report.html
+      - name: Storing report
+        uses: actions/upload-artifact@v2
+        with:
+          name: Newman report
+          path: PostmanDemo/report.html
+          retention-days: 2
+      - name: Send mail
+        if: always()
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          username: betesting19@gmail.com
+          password: Knoldus@123
+          subject: Github Actions job result
+          to: ankur.thakur@knoldus.com
+          html_body: PostmanDemo/report.html
+          from: QA
+          body: 'Build job of ${{github.repository}} - Testing Report completed successfully!'
+        #  attachments: ./target/surefire-reports/html/*.css, ./target/surefire-reports/html/*.html, ./logs/logFile.log
