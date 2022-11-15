@@ -75,8 +75,8 @@ jobs:
         with:
           server_address: smtp.gmail.com
           server_port: 465
-          username: betesting19@gmail.com
-          password: Knoldus@123
+          username: 'betesting19@gmail.com'
+          password: 'Knoldus@123'
           subject: Github Actions job result
           to: ankur.thakur@knoldus.com
           html_body: PostmanDemo/report.html
