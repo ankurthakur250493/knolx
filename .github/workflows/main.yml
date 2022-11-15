@@ -52,3 +52,13 @@ jobs:
         uses: k6io/action@v0.1
         with:
           filename: PSRTestDemo/demo.js
+
+  psotman_newman_test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2-beta
+        with:
+          node-version: '12'
+      - run: npm install -g newman
+      - run: newman run PostmanDemo/PostmanDemo.postman_collection.json
